@@ -1,0 +1,577 @@
+/*------------------------------------------------------------------------*/
+/* BASIC SETUP */
+/*------------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  background-color: #fff;
+  color: #555;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/*------------------------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------------------------------------------------------*/
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  margin: 1%;
+}
+
+/* ---- HEADINGS ---- */
+
+h1,
+h2,
+h3 {
+  font-weight: inherit;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: inherit;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 110%;
+  word-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+h2:after {
+  display: block;
+  content: " ";
+  width: 10%;
+  height: 2px;
+  background-color: #e67e22;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* ---- PARAGRAPHS ---- */
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin: 0 15%;
+  margin-bottom: 20px;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* ---- BUTTONS ---- */
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 200px;
+  padding: 10px 30px;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  border: 1px solid #227de6;
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #bf6516;
+  border: 1px solid #e67e22;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: #fff;
+  background-color: #bf6516;
+}
+/* ---- BIG ICONS ---- */
+.big-icon {
+  font-size: 300%;
+  color: #bf6516;
+}
+
+.small-icon {
+  font-size: 90%;
+  margin-right: 20px;
+  margin-top: 2px;
+  color: #e67e22;
+}
+
+/*------------------------------------------------------------------------*/
+/* HEADER STYLING */
+/*------------------------------------------------------------------------*/
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 10px 0;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:active,
+.main-nav li a:hover {
+  border-bottom: 1px solid #bf6516;
+}
+/*------------------------------------------------------------------------*/
+/* FEATURES */
+/*------------------------------------------------------------------------*/
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/*------------------------------------------------------------------------*/
+/* MEALS */
+/*------------------------------------------------------------------------*/
+
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  width: 100%;
+  list-style: none;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  overflow: hidden; /* The overflow property specifies what should happen if content overflows an element's box.
+                              Think of it when a chiled element is scaled bigger than its parent border */
+  margin: 0;
+  background-color: #000; /* note I am setting this property because when I use opacity with this elemet's child image, 
+                                  I want a dark grey color, not a white grey color*/
+}
+
+.meal-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/*------------------------------------------------------------------------*/
+/* STEPS */
+/*------------------------------------------------------------------------*/
+
+.section-steps {
+  background-color: rgb(250, 248, 248);
+}
+
+.works-step:first-child {
+  margin-top: 80px;
+}
+
+.steps-box:first-child {
+  text-align: right;
+}
+
+.app-screen {
+  width: 40%;
+  margin-top: 30px;
+}
+
+.works-step,
+.store-icons {
+  margin-bottom: 50px;
+  margin-left: 20%;
+}
+
+.works-step div {
+  float: left;
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 190%;
+  text-align: center;
+  margin-right: 25px;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+}
+
+/*------------------------------------------------------------------------*/
+/* CITIES */
+/*------------------------------------------------------------------------*/
+
+.city-entery {
+  margin-right: 20px;
+}
+
+.city-entery img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.city-entery h3 {
+  width: 100%;
+  height: auto;
+  margin: 10px 0 20px 0;
+}
+
+.city-description {
+  margin-left: 10px;
+}
+
+.city-description-entery {
+  margin-bottom: 10px;
+}
+
+.city-description-entery i {
+  float: left;
+}
+
+.city-description-entery:last-child a:link,
+.city-description-entery:last-child a:visited {
+  /* display: inline-block; */
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom: 2px;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+.city-description-entery:last-child a:active,
+.city-description-entery:last-child a:hover {
+  /* display: inline-block; */
+  text-decoration: none;
+  color: #555;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+/*------------------------------------------------------------------------*/
+/* CUSTOMERS */
+/*------------------------------------------------------------------------*/
+
+.section-customers {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/back-customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.customer-info {
+  font-style: italic;
+  margin-top: 30px;
+}
+
+.customer-review:before {
+  content: "\201C"; /* css glyphs*/
+  font-size: 500%;
+  display: block;
+  margin-left: -10px;
+}
+
+.customer-review {
+  font-style: italic;
+  line-height: 145%;
+  margin-top: 30px;
+}
+
+.customer-info img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.customer-info p {
+  font-size: 90%;
+  padding-top: 10px;
+}
+
+/*------------------------------------------------------------------------*/
+/* PLANS */
+/*------------------------------------------------------------------------*/
+
+.section-plans {
+  background-color: rgb(250, 248, 248);
+}
+
+.card {
+  margin-right: 30px;
+  background-color: #fff;
+}
+
+.card-part-one {
+  text-align: left;
+  border-bottom: 1px solid rgb(216, 209, 209);
+}
+
+.card-part-two {
+  border-bottom: 1px solid rgb(216, 209, 209);
+}
+
+.card-part-one p:first-child {
+  font-size: 120%;
+  text-transform: uppercase;
+  padding: 20px 0 0 20px;
+  margin-bottom: 10px;
+}
+
+.card-part-one p:nth-child(2) {
+  color: #e67e22;
+  font-size: 300%;
+  float: left;
+  padding: 10px 0 0 10px;
+  font-weight: 100;
+}
+
+.card-part-one p:nth-child(3) {
+  color: #e67e22;
+  font-size: 100%;
+  margin-top: 45px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.card-part-one p:nth-child(4) {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 80%;
+}
+
+.card-part-two p {
+  display: inline-block;
+}
+
+.card-part-two i {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #e67e22;
+}
+
+.card-part-two div {
+  margin-top: 10px;
+}
+
+.card-part-two div:first-child {
+  margin-top: 20px;
+}
+
+.card-part-two div:last-child {
+  margin-bottom: 20px;
+}
+
+.card-part-three {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------------*/
+/* FORM */
+/*------------------------------------------------------------------------*/
+
+.contact-form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 96.4%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*------------------------------------------------------------------------*/
+/* FOOTER */
+/*------------------------------------------------------------------------*/
+
+footer {
+  background-color: #3d3c3c;
+  color: rgb(145, 143, 143);
+}
+
+.row-one {
+  padding: 50px 0;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul:nth-of-type(1) {
+  float: left;
+  font-size: 80%;
+}
+
+footer ul:nth-of-type(1) li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer ul:nth-of-type(2) {
+  float: right;
+  font-size: 130%;
+}
+
+footer ul:nth-of-type(2) li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.row-two {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 80%;
+  padding: 30px 0 20px 0;
+}
+
+.row-three {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 80%;
+  padding-bottom: 50px;
+}
+
+footer ul a:link,
+footer ul a:visited {
+  color: rgb(145, 143, 143);
+  transition: color 0.2s;
+}
+
+footer ul:first-of-type a:active,
+footer ul:first-of-type a:hover {
+  color: #fff;
+}
+
+footer ul:nth-of-type(2) a:active,
+footer ul:nth-of-type(2) a:hover {
+  color: rgb(0, 140, 255);
+}
+
+.row-three p span {
+  color: #f00;
+}

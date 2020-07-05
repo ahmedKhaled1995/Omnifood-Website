@@ -1,0 +1,90 @@
+@media only screen and (max-width: 1200px) {
+  .hero-text-box {
+    width: 100%;
+    margin: 0 2%;
+  }
+  .row {
+    margin: 0 2%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 18px;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .long-copy {
+    width: 70%;
+    margin-left: 15%;
+    line-height: 145%;
+  }
+  .works-step div {
+    float: none;
+  }
+  .app-screen {
+    width: 60%;
+    margin-top: 120px;
+  }
+  .works-step div {
+    margin-bottom: 30px;
+  }
+
+  .city-entery {
+    font-size: 77.38%;
+    font-weight: 400;
+  }
+
+  .card {
+    font-size: 82%;
+    font-weight: 400;
+  }
+
+  .card-part-two {
+    font-size: 85%;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .col {
+    width: 100%;
+  }
+  .app-screen {
+    width: 30%;
+    margin-top: 30px;
+    margin-right: 35%;
+  }
+  .city-entery img {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .city-description-entery,
+  .city-entery h3 {
+    width: 100%;
+    margin-left: 30%;
+  }
+  .card {
+    font-size: 90%;
+    font-weight: 400;
+  }
+
+  .card-part-two {
+    font-size: 90%;
+    font-weight: 400;
+  }
+
+  footer ul:nth-of-type(1) {
+  }
+
+  footer ul:nth-of-type(2) {
+    margin-top: 5%;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+}
