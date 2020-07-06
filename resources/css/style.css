@@ -176,11 +176,21 @@ header {
   height: 100px;
   width: auto;
   margin-top: 20px;
+  float: left;
+}
+
+.logo-black {
+  float: left;
+  display: none;
+  height: 40px;
+  width: auto;
+  margin-top: 10px;
 }
 
 .main-nav {
   float: right;
   margin-top: 55px;
+  color: #555;
 }
 
 .main-nav li {
@@ -201,6 +211,48 @@ header {
 .main-nav li a:hover {
   border-bottom: 1px solid #bf6516;
 }
+
+/* ------------------- STICKY HEADER STYLING ------------------- */
+
+.sticky-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #f0f0f0;
+  z-index: 9999; /*to keep this element always on top if it stacks with other elements*/
+}
+
+.sticky-header .main-nav {
+  margin-top: 20px;
+}
+
+.sticky-header .main-nav li a:link,
+.sticky-header .main-nav li a:visited {
+  color: rgb(83, 80, 80);
+}
+
+.sticky-header .logo-black {
+  display: inline-block;
+}
+
+.sticky-header .logo {
+  display: none;
+}
+
+/* ------------------- MOBILE NAV STYLING ------------------- */
+
+.moblie-nav-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.moblie-nav-icon i {
+  font-size: 200%;
+  color: rgb(212, 211, 211);
+}
+
 /*------------------------------------------------------------------------*/
 /* FEATURES */
 /*------------------------------------------------------------------------*/
@@ -574,4 +626,29 @@ footer ul:nth-of-type(2) a:hover {
 
 .row-three p span {
   color: #f00;
+}
+
+/*------------------------------------------------------------------------*/
+/* ANIMATIONS */
+/*------------------------------------------------------------------------*/
+
+/* Note how in animations styling we are using javaScript class selectores */
+
+.js-waypoint-1,
+.js-waypoint-2,
+.js-waypoint-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js-waypoint-4 {
+  animation-duration: 1s;
+}
+
+.animate__animated.js-waypoint-1,
+.animate__animated.js-waypoint-2,
+.animate__animated.js-waypoint-3 {
+  /*note that this is .className.className not .className .className, the first means apply the styling if the element has these two classes, 
+                                    while the later means select a child className whose parent is className.*/
+  opacity: 1;
 }

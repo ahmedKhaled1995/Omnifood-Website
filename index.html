@@ -2,17 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Omnifood is a food delivery service that ensures fresh food, fast delivery and ease of coocking. Start eating health now!"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./vendors/css/normalize.css" />
     <!-- note how normalize.css must be linked before our owns styles file -->
     <link rel="stylesheet" href="./resources/css/style.css" />
     <link rel="stylesheet" href="./vendors/css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <link rel="stylesheet" href="./vendors/css/ionicons.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./resources/css/queries.css" />
+    <link rel="icon" href="./resources/img/burger.png" />
     <title>Omnifood</title>
   </head>
   <body>
@@ -24,12 +33,20 @@
             alt="Omnifood_Logo"
             class="logo"
           />
-          <ul class="main-nav">
-            <li><a href="#">Food delivery</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Our cities</a></li>
-            <li><a href="#">Sign up</a></li>
+          <img
+            src="./resources/img/logo.png"
+            alt="Omnifood_Logo"
+            class="logo-black"
+          />
+          <ul class="main-nav js-main-nav">
+            <li><a href="#" class="js-delivery-link">Food delivery</a></li>
+            <li><a href="#" class="js-how-it-works-link">How it works</a></li>
+            <li><a href="#" class="js-cities-link">Our cities</a></li>
+            <li><a href="#" class="js-signup">Sign up</a></li>
           </ul>
+          <a class="moblie-nav-icon js-mobile-nav-icon"
+            ><i class="ion-ios-menu js-icon"></i
+          ></a>
         </div>
       </nav>
       <div class="hero-text-box">
@@ -37,20 +54,20 @@
           Goodbye junk food.<br />
           Hello super healthy meals.
         </h1>
-        <a class="btn btn-full" href="#">I’m hungry</a>
-        <a class="btn btn-ghost" href="#">Show me more</a>
+        <a class="btn btn-full js-hungry-btn" href="#">I’m hungry</a>
+        <a class="btn btn-ghost js-show-more-btn" href="#">Show me more</a>
       </div>
     </header>
-    <section class="section-features">
+    <section class="section-features js-section-features">
       <div class="row">
         <h2>Get food fast &mdash; not fast food</h2>
         <p class="long-copy">
           Hello, we’re Omnifood, your new premium food delivery service. We know
           you’re always busy. No time for cooking. So let us take care of that,
           we’re really good at it, we promise!
-        </p class="long-copy">
+        </p>
       </div>
-      <div class="row">
+      <div class="row js-waypoint-1">
         <div class="col span-1-of-4 box">
           <i class="ion-ios-infinite big-icon"></i>
           <h3>Up to 365 days/year</h3>
@@ -156,7 +173,7 @@
         </li>
       </ul>
     </section>
-    <section class="section-steps" id="works">
+    <section class="section-steps js-section-steps" id="works">
       <div class="row">
         <h2>How it works &mdash; Simple as 1, 2, 3</h2>
       </div>
@@ -165,7 +182,7 @@
           <img
             src="./resources/img/cell_phone.png"
             alt="Omnifood app on iPhone"
-            class="app-screen"
+            class="app-screen js-waypoint-2"
           />
         </div>
         <div class="col span-1-of-2 steps-box">
@@ -205,11 +222,11 @@
         </div>
       </div>
     </section>
-    <section class="section-cities">
+    <section class="section-cities js-section-cities">
       <div class="row">
         <h2>We're currently in these cities</h2>
       </div>
-      <div class="row">
+      <div class="row js-waypoint-3">
         <div class="col span-1-of-4">
           <div class="city-entery">
             <img src="./resources/img/lisbon-3.jpg" alt="Lisbon" />
@@ -349,7 +366,7 @@
         </div>
       </div>
     </section>
-    <section class="section-plans">
+    <section class="section-plans js-section-plans">
       <div class="row">
         <h2>
           Start eating healthy today
@@ -358,7 +375,7 @@
       <div class="cards">
         <div class="row">
           <div class="col span-1-of-3">
-            <div class="card">
+            <div class="card js-waypoint-4">
               <div class="card-part-one clearfix">
                 <p>Premium</p>
                 <p>$399</p>
@@ -551,10 +568,10 @@
       <div class="row">
         <div class="row-two">
           <p>
-            This webpage was created for the course "Design and Develop a Killer
-            Website Using HTML5 and CSS3" by Jonas Schmedtmann. No copyrights
-            here. This webpage is for you! So go and do whatever you want with
-            it and have fun.
+            This webpage was designed for the course "Design and Develop a
+            Killer Website Using HTML5 and CSS3" by Jonas Schmedtmann. Developed
+            by Ahmed K Hassanien as an educational project for responsive web
+            design.
           </p>
         </div>
       </div>
@@ -567,5 +584,12 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./vendors/js/jquery.waypoints.min.js"></script>
+    <script src="./resources/js/script.js"></script>
   </body>
 </html>
