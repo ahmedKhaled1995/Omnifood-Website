@@ -148,4 +148,7 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .js-hungry-btn {
+    margin-bottom: 30px;
+  }
 }
